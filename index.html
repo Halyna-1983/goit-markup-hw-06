@@ -397,5 +397,63 @@
 
         </footer>
         <script src="./js/modal.js"></script>
+
+     <form class="form" autocomplete="on">
+
+        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+        <div class="form-field">
+            <label class="form-text" for="name">Имя</label> 
+            <input type="text" name="name" id="name" placeholder="Иван Иванич" autofocus/>
+        </div>
+
+        <div class="form-field">
+            <label class="form-text" for="tel">Телефон</label>
+            <input type="text" name="tel" id="tel"placeholder="+38" autofocus/>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-text" for="email">Почта</label>
+            <input type="email" name="email" id="email" placeholder="my@mail.com" autofocus/>
+        </div>
+
+        <div class="form-field">
+            <label class="form-text" for="comment">Комментарий</label>
+            <input type="comment" name="comment" id="comment" placeholder="текст" autofocus/>
+        </div>
+
+        <!-- <div role="group">
+            <input type="checkbox" name="" value="html" id="html">
+             <label for="html">HTML</label>
+
+             <input type="checkbox" name="" value="css" id="css">
+             <label for="css">CSS</label>
+
+             <input type="checkbox" name="" value="jS" id="jS">
+             <label for="jS">JS</label>
+        </div>
+        
+        <div role="group">
+            <input type="radio" name="experience" value="junior" id="junior">
+            <label for="Junior">Junior</label>
+
+            <input type="radio" name="experience" value="middle" id="middle">
+            <label for="middle">middle</label>
+
+            <input type="radio" name="experience" value="senior" id="senior">
+            <label for="senior">senior</label>
+        </div> -->
+
+        <label for="comment">Комментарий</label>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+        <br />
+        
+        <input type="checkbox" name="policy" id="policy">
+        <label for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+
+        <br />
+        <button type="submit">Отправить</button>
+     </form>   
 </body>
 </html>
