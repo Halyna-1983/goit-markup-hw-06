@@ -27,7 +27,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
-    outline: 1px solid lawngreen;
+    
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -793,7 +793,7 @@ address:hover, address:focus {
 }
 
 .contact-block {
-    outline: 1px solid lawngreen;
+    
     padding-right: 15px;
     padding-left: 15px;
     /* margin-top: 0;
@@ -880,8 +880,6 @@ address:hover, address:focus {
     top: 50%;
     left: 50%;
     
-    width: 530px;
-    height: 580px;
     background-color: #fff;
 
     transform: translate(-50%, -50%) scale(1);
@@ -890,12 +888,12 @@ address:hover, address:focus {
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
+
     width: 530px;
     height: 580px;
     outline: 1px solid violet;
-
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .form-title {
@@ -911,41 +909,37 @@ address:hover, address:focus {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 15px;
+
+    margin: 0;
 }
 
 .form-field {
-    display: flex;
-    flex-direction: column;
-
-    outline: 1px solid blue;
-   
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .form-text {
-    width: 25px;
-    height: 14px;
-
+    position: relative;
+   
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17px;
+    line-height: 1.17;
 
     color: #757575;
-    padding-top: 15px;
-    margin-left: 40px;
-    margin-right: 40px;
+        
     margin-bottom: 4px;
+
+    padding-left: 40px;
+    text-align: none;
 }
 
 .form-field label {
     margin-bottom: 5px;
 }
 
-.form-field input {
-    /* margin: 0;
-    padding: 0; */
-}
-.form-field input {
+.form-input {
     width: 450px;
     height: 40px;
 
@@ -955,16 +949,87 @@ address:hover, address:focus {
 
     margin-left: 40px;
     margin-right: 40px;
-    
+    padding: 10px 20px;
 }
 
-.form-field input::placeholder {
-    color: rgba(117, 117, 117, 0.5);
+.form-icon {
+    position: absolute;
+    
+    top: 50%;
+    left: 12px;
 }
+
+.form-field:focus-within .form-text {
+    transform: translate(-50%);
+}
+
+.text-comment {
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+   
+}
+
+.form-message {
+    display: block;
+
+    width: 450px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 1.17;
+    color: rgba(117, 117, 117, 0.5);
+
+    padding: 12px 16px;
+  }
+
+.form-input:focus,
+.form-message:focus {
+    outline: none;
+    border: 1px solid  #2196f3;
+}
+
+.form-input:focus + .form-icon {
+    fill:  #2196f3;
+}
+
+.information-field-wrapper {
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.information-form-btn {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin: 0 auto;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 56px;
+  }
 
 .close {
-    top: 0;
-    right: 0;
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
 
     width: 30px;
     height: 30px;
@@ -972,5 +1037,66 @@ address:hover, address:focus {
     padding: 0;
 
     border-radius: 50%;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    background-color: #fff;
 }
+
+.subscription {
+   
+    padding-left: 130px;
+    
+}
+
+.subscribe-form-input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+  }
+
+.form-field-subscription {
+  position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.subscribe-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    padding: 10px 29px;
+    margin-left: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.143;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    text-align: left;
+    border-style: none;
+    background-color:  #2196f3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .subscribe-button::after {
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*border-radius: 4px;*/
+  }
+  
+  .iconsend::after {
+    background-image: url(../svg/send.svg);
+  }
+       
