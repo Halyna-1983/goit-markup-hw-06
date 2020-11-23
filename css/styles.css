@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    text-decoration: none;
 }
 
 :root {
@@ -352,29 +353,11 @@ ul {
 
     margin: 0;
 
-    opacity: 0;
-}
-
-.element:hover .element-title-css {
     opacity: 1;
-
-    transition: 250ms;
+    
 }
 
-/* .element-shadowbox {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-   
-    width: 370px;
-    height: 70px;
-   
-    background-color: rgba(47, 53, 58, 0.8);
-
-    opacity: 0;
-}
-
-.element:hover .element-shadowbox {
+/* .element:hover .element-title-css {
     opacity: 1;
 
     transition: 250ms;
@@ -863,6 +846,8 @@ address:hover, address:focus {
 
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 1;
 }
 
 .backdrop.is-hidden {
@@ -901,7 +886,7 @@ address:hover, address:focus {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    text-align: center;
+    /* text-align: center; */
    
     color: #212121;
 
@@ -915,7 +900,8 @@ address:hover, address:focus {
 
 .form-field {
     position: relative;
-    display: block;
+    display: flexbox;
+    /* flex-direction: column; */
     margin-bottom: 10px;
 }
 
@@ -931,8 +917,8 @@ address:hover, address:focus {
         
     margin-bottom: 4px;
 
+    text-align: left;
     padding-left: 40px;
-    text-align: none;
 }
 
 .form-field label {
@@ -949,7 +935,7 @@ address:hover, address:focus {
 
     margin-left: 40px;
     margin-right: 40px;
-    padding: 10px 20px;
+    padding: 10px 45px;
 }
 
 .form-icon {
@@ -957,6 +943,7 @@ address:hover, address:focus {
     
     top: 50%;
     left: 12px;
+    margin-left: 45px;
 }
 
 .form-field:focus-within .form-text {
@@ -967,7 +954,6 @@ address:hover, address:focus {
     margin-top: 10px;
     margin-left: 40px;
     margin-right: 40px;
-   
 }
 
 .form-message {
@@ -985,7 +971,7 @@ address:hover, address:focus {
     color: rgba(117, 117, 117, 0.5);
 
     padding: 12px 16px;
-  }
+}
 
 .form-input:focus,
 .form-message:focus {
@@ -1023,7 +1009,7 @@ address:hover, address:focus {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 56px;
-  }
+}
 
 .close {
     position: absolute;
@@ -1043,9 +1029,7 @@ address:hover, address:focus {
 }
 
 .subscription {
-   
     padding-left: 130px;
-    
 }
 
 .subscribe-form-input {
@@ -1056,7 +1040,7 @@ address:hover, address:focus {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: #ffffff;
-  }
+}
 
 .form-field-subscription {
   position: relative;
