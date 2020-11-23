@@ -916,8 +916,6 @@ address:hover, address:focus {
     color: #757575;
         
     margin-bottom: 4px;
-
-    text-align: left;
     padding-left: 40px;
 }
 
@@ -952,7 +950,7 @@ address:hover, address:focus {
 
 .text-comment {
     margin-top: 10px;
-    margin-left: 40px;
+    
     margin-right: 40px;
 }
 
@@ -971,7 +969,9 @@ address:hover, address:focus {
     color: rgba(117, 117, 117, 0.5);
 
     padding: 12px 16px;
+    margin-left: 45px;
 }
+
 
 .form-input:focus,
 .form-message:focus {
@@ -985,9 +985,31 @@ address:hover, address:focus {
 
 .information-field-wrapper {
     position: relative;
+    
     margin-top: 20px;
+    margin-left: 55px;
 }
 
+.form-field textarea {
+    margin-left: 40px;
+}
+
+.agreement-policy {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+     font-size: 14px;
+    line-height: 1.71;
+}
+
+.agreement-terms {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: underline;
+}
 
 .information-form-btn {
     display: flex;
